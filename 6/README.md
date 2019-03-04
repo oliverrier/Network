@@ -1,5 +1,11 @@
 # TP6 Topologie Réseau
 
+## Sommaire
+
+* I. [Préparation du lab](#i---préparation-du-lab)
+
+* II. [Mise en place du lab](#ii---mise-en-place-du-lab)
+
 ## I- Présentation du lab
 
 ### Réseaux IP et aires OSPF
@@ -29,16 +35,18 @@ Machines | `10.6.100.0/30` | `10.6.100.4/30` | `10.6.100.8/30` | `10.6.100.12/30
 `client2.tp6.b1` | - | - | - | - | - |  `10.6.201.11` | -
 `server1.tp6.b1` | - | - | - | - | - | - | `10.6.202.10`
 
-## 2. Mise en place du lab
+## II- Mise en place du lab
 
-### Checklist IP Routeurs
+### Checklists
+
+**Checklist IP Routeurs:**
 
 On parle de `r1.tp6.b1`, `r2.tp6.b1`, `r3.tp6.b1`, `r4.tp6.b1` et `r5.tp6.b1` :
 
 * [X] Définition des IPs statiques
 * [X] Définition du nom de domaine
 
-### Checklist VMs
+**Checklist VMs:**
 
 On parle de `client1.tp6.b1`, `client2.tp6.b1` et `server1.tp6.b1` :
 
