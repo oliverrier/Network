@@ -1,0 +1,37 @@
+r3.tp6#show running-config
+Building configuration...
+
+Current configuration : 1081 bytes
+!
+version 12.4
+!
+hostname r3.tp6
+!
+ip cef
+no ip domain lookup
+!
+!
+interface Ethernet0/0
+ ip address 10.6.100.10 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/1
+ ip address 10.6.100.14 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/2
+ ip address 10.6.101.1 255.255.255.252
+ half-duplex
+!
+!
+router ospf 1
+ router-id 3.3.3.3
+ log-adjacency-changes
+ network 10.6.100.8 0.0.0.3 area 0
+ network 10.6.100.12 0.0.0.3 area 0
+ network 10.6.101.0 0.0.0.3 area 1
+!
+no ip http server
+ip forward-protocol nd
+!
+

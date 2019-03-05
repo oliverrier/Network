@@ -1,0 +1,29 @@
+r5.tp6#show running-config
+Building configuration...
+
+Current configuration : 1031 bytes
+!
+version 12.4
+!
+hostname r5.tp6
+!
+!
+interface Ethernet0/0
+ ip address 10.6.101.2 255.255.255.252
+ half-duplex
+!
+interface Ethernet0/1
+ ip address 10.6.201.254 255.255.255.0
+ half-duplex
+!
+!
+router ospf 1
+ router-id 5.5.5.5
+ log-adjacency-changes
+ network 10.6.101.0 0.0.0.3 area 1
+ network 10.6.201.0 0.0.0.255 area 1
+!
+no ip http server
+ip forward-protocol nd
+!
+
