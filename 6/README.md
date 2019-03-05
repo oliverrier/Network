@@ -2,11 +2,19 @@
 
 ## Sommaire
 
-* I. [Préparation du lab](#i---préparation-du-lab)
+* I. [Préparation du lab](#i--préparation-du-lab)
+    ** [Réseaux IP et aires OSPF](#réseaux-ip-et-aires-ospf)
+    **[Adressage IP de chacune des machines](#adressage-ip-de-chacune-des-machines)
 
-* II. [Mise en place du lab](#ii---mise-en-place-du-lab)
+* II. [Mise en place du lab](#ii--mise-en-place-du-lab)
+    ** [Checklists](#checklists)
+    ** [Configuration OSPF](#configuration-ospf)
 
-* III. [Let's end this properly](#iii---let-s-end-this-properly)
+
+* III. [Let's end this properly](#iii--lets-end-this-properly)
+    **[NAT: Accès internet](#nat-acces-internet)
+    **[Service d'infra](#service-d-infra)
+    **[Serveur DHCP](#serveur-dhcp)
 
 ## I- Présentation du lab
 
@@ -125,7 +133,7 @@ traceroute to client2 (10.6.201.11), 30 hops max, 60 byte packets
 
 ### NAT: Accès internet
 
-curl google.com sur `server1`:
+curl `google.com` sur `server1`:
 
 ```bash
 [iroh@server1 ~]$ curl 216.58.204.100
@@ -136,3 +144,62 @@ The document has moved
 <A HREF="http://www.google.com/">here</A>.
 </BODY></HTML>
 ```
+
+### Service d'infra
+
+`client1` curl `server1`
+
+```bash
+[iroh@client1 ~]$ curl server1
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+    <head>
+        <title>Test Page for the Nginx HTTP Server on Fedora</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <h1>Welcome to <strong>nginx</strong> on Fedora!</h1>
+
+        <div class="content">
+            <p>This page is used to test the proper operation of the
+            <strong>nginx</strong> HTTP server after it has been
+            installed. If you can read this page, it means that the
+            web server installed at this site is working
+            properly.</p>
+
+            <div class="alert">
+                <h2>Website Administrator</h2>
+                <div class="content">
+                    <p>This is the default <tt>index.html</tt> page that
+                    is distributed with <strong>nginx</strong> on
+                    Fedora.  It is located in
+                    <tt>/usr/share/nginx/html</tt>.</p>
+
+                    <p>You should now put your content in a location of
+                    your choice and edit the <tt>root</tt> configuration
+                    directive in the <strong>nginx</strong>
+                    configuration file
+                    <tt>/etc/nginx/nginx.conf</tt>.</p>
+
+                </div>
+            </div>
+
+            <div class="logos">
+                <a href="http://nginx.net/"><img
+                    src="nginx-logo.png"
+                    alt="[ Powered by nginx ]"
+                    width="121" height="32" /></a>
+
+                <a href="http://fedoraproject.org/"><img
+                    src="poweredby.png"
+                    alt="[ Powered by Fedora ]"
+                    width="88" height="31" /></a>
+            </div>
+        </div>
+    </body>
+</html>
+```
+
+### Serveur DHCP
