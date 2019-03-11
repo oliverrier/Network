@@ -203,3 +203,15 @@ The document has moved
 ```
 
 ### Serveur DHCP
+
+Utilisation du dhcp sur `client1`:
+
+```bash
+[iroh@client1 network-scripts]$ ip a
+2: enp0s3: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 08:00:27:df:30:89 brd ff:ff:ff:ff:ff:ff
+    inet 10.6.201.50/24 brd 10.6.201.255 scope global noprefixroute dynamic enp0s3
+       valid_lft 599sec preferred_lft 599sec
+    inet6 fe80::a00:27ff:fedf:3089/64 scope link
+       valid_lft forever preferred_lft forever
+```
