@@ -3,18 +3,17 @@
 ## Sommaire
 
 * I. [Préparation du lab](#i--préparation-du-lab)
-    ** [Réseaux IP et aires OSPF](#réseaux-ip-et-aires-ospf)
-    **[Adressage IP de chacune des machines](#adressage-ip-de-chacune-des-machines)
+  * [Réseaux IP et aires OSPF](#réseaux-ip-et-aires-ospf)
+  * [Adressage IP de chacune des machines](#adressage-ip-de-chacune-des-machines)
 
 * II. [Mise en place du lab](#ii--mise-en-place-du-lab)
-    ** [Checklists](#checklists)
-    ** [Configuration OSPF](#configuration-ospf)
-
+  * [Checklists](#checklists)
+  * [Configuration OSPF](#configuration-ospf)
 
 * III. [Let's end this properly](#iii--lets-end-this-properly)
-    **[NAT: Accès internet](#nat-acces-internet)
-    **[Service d'infra](#service-d-infra)
-    **[Serveur DHCP](#serveur-dhcp)
+  * [NAT: Accès internet](#nat-acces-internet)
+  * [Service d'infra](#service-d-infra)
+  * [Serveur DHCP](#serveur-dhcp)
 
 ## I- Présentation du lab
 
